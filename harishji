@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFC Complaint Box</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to NFC Complaint Box</h1>
+        <form action="submit_complaint.php" method="POST" enctype="multipart/form-data">
+            <label for="title">Complaint Title:</label>
+            <input type="text" id="title" name="title" required>
+
+            <label for="description">Complaint Description:</label>
+            <textarea id="description" name="description" required></textarea>
+
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="Service">Service</option>
+                <option value="Payment">Payment</option>
+                <option value="Delivery">Delivery</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="file">Attach File (Optional):</label>
+            <input type="file" id="file" name="file">
+
+            <button type="submit">Submit Complaint</button>
+        </form>
+    </div>
+</body>
+</html>
